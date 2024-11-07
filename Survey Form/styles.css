@@ -10,9 +10,6 @@
 
 body {
     background-color: #f4f4f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
     padding: 20px;
 }
@@ -36,8 +33,9 @@ p#description {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    max-width: 500px;
+    max-width: 750px;
     width: 100%;
+    margin: 0 auto;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -76,7 +74,7 @@ p#description {
 }
 
 /* Radio Buttons and Checkboxes */
-#survey-form p {
+#survey-form legend {
     margin-top: 15px;
     color: #333;
     font-weight: bold;
