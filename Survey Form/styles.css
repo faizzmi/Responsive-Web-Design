@@ -1,0 +1,121 @@
+/* styles.css */
+
+/* General Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1#title {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+p#description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+/* Form Container */
+#survey-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Labels */
+#survey-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #555;
+}
+
+/* Input Fields */
+#survey-form input[type="text"],
+#survey-form input[type="email"],
+#survey-form input[type="number"],
+#survey-form select,
+#survey-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+/* Placeholder Text */
+#survey-form input::placeholder,
+#survey-form textarea::placeholder {
+    color: #aaa;
+}
+
+/* Text Area */
+#survey-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Radio Buttons and Checkboxes */
+#survey-form p {
+    margin-top: 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+#survey-form input[type="radio"],
+#survey-form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Submit Button */
+#submit {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #survey-form {
+        padding: 15px;
+    }
+
+    h1#title {
+        font-size: 1.8em;
+    }
+
+    p#description {
+        font-size: 1em;
+    }
+}
