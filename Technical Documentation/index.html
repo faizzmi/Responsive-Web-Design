@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Technical Documentation</title>
+    
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>Table of Contents</header>
+        <a href="#JavaScript_and_Java" class="nav-link">JavaScript and Java</a>
+        <a href="#HTML_and_CSS" class="nav-link">HTML and CSS</a>
+        <a href="#React_Fundamentals" class="nav-link">React Fundamentals</a>
+        <a href="#NodeJS_Basics" class="nav-link">NodeJS Basics</a>
+        <a href="#Angular_Tips" class="nav-link">Angular Tips</a>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="JavaScript_and_Java">
+            <header>JavaScript and Java</header>
+            <p>Despite their similar names, JavaScript and Java are completely different programming languages.
+                JavaScript is primarily used for client-side scripting to make web pages interactive, while Java is a
+                general-purpose, object-oriented programming language commonly used for building applications, including
+                web servers, Android apps, and enterprise software.</p>
+            <ul>
+                <li><strong>Tip:</strong> Use JavaScript for web-based interactivity, animations, and UI elements.</li>
+                <li><strong>Benefit:</strong> Java is highly reliable for building scalable and maintainable back-end
+                    systems.</li>
+            </ul>
+            <code>
+                document.getElementById('btn').addEventListener('click', () => {
+                alert('Button clicked!');
+                });
+            </code>
+
+            <label>Example JavaScript code for backend:</label>
+            <code>
+                public class HelloWorld {
+                public static void main(String[] args) {
+                    System.out.println("Hello, World!");
+                }
+                }</code>
+        </section>
+
+        <section class="main-section" id="HTML_and_CSS">
+            <header>HTML and CSS</header>
+            <p>HTML provides the structure for web pages, defining elements like headings, paragraphs, and images. CSS
+                adds style and layout to these elements, allowing developers to create visually appealing designs.
+                Together, they form the backbone of web development.</p>
+            <ul>
+                <li><strong>Tip:</strong> Use semantic HTML tags like <code>&lt;header&gt;</code> and
+                    <code>&lt;article&gt;</code> for better accessibility and SEO.</li>
+                <li><strong>Benefit:</strong> CSS enables responsive design through features like media queries and
+                    flexbox/grid layouts.</li>
+            </ul>
+            <code>&lt;!-- Example HTML --&gt;
+&lt;div&gt;Welcome to My Website&lt;/div&gt;</code>
+            <code>/* Example CSS */
+div {
+    color: blue;
+    font-size: 20px;
+}</code>
+        </section>
+
+        <section class="main-section" id="React_Fundamentals">
+            <header>React Fundamentals</header>
+            <p>React is a JavaScript library used for building user interfaces. It allows developers to create reusable
+                components, manage state efficiently, and build dynamic web applications with ease. React is known for
+                its virtual DOM, which boosts rendering performance.</p>
+            <ul>
+                <li><strong>Tip:</strong> Use functional components and React hooks like <code>useState</code> and
+                    <code>useEffect</code> for cleaner code.</li>
+                <li><strong>Benefit:</strong> React's component-based structure improves code reusability and
+                    maintainability.</li>
+            </ul>
+            <code>// Example React functional component
+function Welcome() {
+    return &lt;h1&gt;Hello, React!&lt;/h1&gt;;
+}</code>
+            <code>// Using a hook
+import React, { useState } from 'react';
+function Counter() {
+    const [count, setCount] = useState(0);
+    return &lt;button onClick={() => setCount(count + 1)}&gt;Click {count}&lt;/button&gt;;
+}</code>
+        </section>
+
+        <!-- Additional sections omitted for brevity -->
+
+    </main>
+</body>
+
+</html>
