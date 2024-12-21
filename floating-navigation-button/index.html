@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Button</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section id="home" class="test-page">
+        <center>Hello World!</center>
+    </section>
+    <section id="projects" class="test-page">
+        <center>Projects</center>
+    </section>
+    <section id="resume" class="test-page">
+        <center>Resume</center>
+    </section>
+
+    <div class="top-bar" id="topBar">
+        <div class="top-bar-header">
+            <span id="topBarTitle">Contact Information</span>
+            <ion-icon name="close-circle-outline" id="closeBtn"></ion-icon>
+        </div>
+        <div class="top-bar-content">
+            <div class="avatar">
+                <img src="https://via.placeholder.com/50">
+            </div>
+            <div class="links">
+                <a href="mailto:example@example.com" >Email</a>
+                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                <a href="tel:+123456789">Call</a>
+            </div>
+        </div>
+    </div>
+
+    
+    <nav class="navigation-bar" id="navbar">
+        <ion-icon id="icon" name="call"></ion-icon>
+        <a href="#home">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume" class="resume-btn">Resume</a>
+    </nav>
+
+
+    <script src="scripts.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
