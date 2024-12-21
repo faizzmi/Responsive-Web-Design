@@ -3,7 +3,7 @@ const iconBar = document.getElementById('icon');
 const closeBtn = document.getElementById("closeBtn");
 const topBar = document.getElementById("topBar");
 const overlay = document.createElement('div');
-overlay.classList.add('dark-overlay'); 
+overlay.classList.add('dark-overlay');
 document.body.appendChild(overlay);
 
 function disableInteractions(e) {
@@ -18,12 +18,12 @@ function enableInteractions() {
 }
 
 iconBar.addEventListener("click", () => {
-    navBar.style.width = "250px";
+    navBar.style.width = "350px";
 
     setTimeout(() => {
-        topBar.style.bottom = "10px"; 
-        topBar.style.opacity = "1"; 
-        topBar.style.width = "290px";
+        topBar.style.bottom = "10px";
+        topBar.style.opacity = "1";
+        topBar.style.width = "390px";
         topBar.style.height = "200px";
 
         window.addEventListener('wheel', disableInteractions, { passive: false });
@@ -32,7 +32,7 @@ iconBar.addEventListener("click", () => {
         overlay.style.display = 'block';
         document.body.classList.add('top-bar-visible');
 
-        iconBar.classList.add('clicked'); 
+        iconBar.classList.add('clicked');
     }, 200);
 });
 
@@ -51,4 +51,40 @@ closeBtn.addEventListener("click", () => {
     iconBar.classList.remove('clicked');
 });
 
+let isScrolling = false;
 
+document.addEventListener('scroll', () => {
+    if (!isScrolling) {
+        isScrolling = true;
+        requestAnimationFrame(() => {
+            handleScroll();
+            isScrolling = false;
+        });
+    }
+});
+
+function handleScroll() {
+    const projectsSection = document.querySelector('.test-page');
+    const container = document.querySelector('.container-resume');
+    const projectContainer = document.getElementById('projects');
+
+    const sectionTop = projectsSection.offsetTop;
+    const sectionBottom = sectionTop + projectsSection.offsetHeight;
+    const scrollPosition = window.scrollY + window.innerHeight;
+
+    const sectionTopP = projectContainer.offsetTop;
+    const sectionHeightP = projectContainer.offsetHeight;
+    const scrollPositionP = window.scrollY + window.innerHeight;
+
+    if (scrollPositionP > sectionTopP && window.scrollY < sectionTopP + sectionHeightP) {
+        projectContainer.classList.add('scrolled');
+    } else {
+        projectContainer.classList.remove('scrolled');
+    }
+
+    if (scrollPosition > sectionTop && window.scrollY < sectionBottom) {
+        container.classList.remove('expanded');
+    } else {
+        container.classList.add('expanded');
+    }
+}
